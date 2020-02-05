@@ -1,0 +1,19 @@
+
+
+.contenido_general{
+    height: 100vh;
+    width: 75%;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 12fr;
+    grid-template-areas: "header"
+                        "main";
+
+}
+
+.header{
+    grid-area: header;
+}
+.main{
+    grid-area: main;
+}
