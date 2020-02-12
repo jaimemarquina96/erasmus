@@ -40,6 +40,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var database_1 = __importDefault(require("../database"));
+var secret_key = 'secretkey';
+var jwt = require('jsonwebtoken');
 var UsuarioController = /** @class */ (function () {
     function UsuarioController() {
     }
@@ -107,6 +109,32 @@ var UsuarioController = /** @class */ (function () {
                     case 1:
                         _a.sent();
                         res.json("Usuario Borrado");
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    UsuarioController.prototype.readLogin = function (req, res) {
+        return __awaiter(this, void 0, void 0, function () {
+            var usuarios, expiresIn, accessToken;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        console.log(req.body);
+                        return [4 /*yield*/, database_1.default.query('SELECT * FROM usuarios WHERE email=? AND password=?', [req.body.email, req.body.password])];
+                    case 1:
+                        usuarios = _a.sent();
+                        console.log(usuarios);
+                        if (usuarios.length == 0) {
+                            res.json({ 'message': 'Error al loguearse' });
+                        }
+                        else {
+                            res.json(usuarios);
+                            expiresIn = 24 * 60 * 60;
+                            accessToken = jwt.sign({ id: req.body.email }, secret_key, { expiresIn: expiresIn });
+                            console.log(accessToken);
+                            res.json(accessToken);
+                        }
                         return [2 /*return*/];
                 }
             });

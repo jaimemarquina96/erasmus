@@ -1,6 +1,7 @@
 
 
 .contenido_general{
+    margin: 0px 5px;
     height: 100vh;
     width: 75%;
     display: grid;
@@ -16,4 +17,5 @@
 }
 .main{
     grid-area: main;
+    padding: 20px;
 }

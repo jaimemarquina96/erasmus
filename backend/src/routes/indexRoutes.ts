@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { controladorInicio } from '../controllers/indexController';
+import { controladorMapa } from '../controllers/mapaController';
 
 class IndexRoutes{
     
@@ -12,6 +13,9 @@ class IndexRoutes{
         this.router.get('/', controladorInicio.inicio);
         this.router.get('/mapa', controladorInicio.mapa);
         this.router.get('/eventos', controladorInicio.eventos);
+        
+        this.router.get('/verpaises', controladorMapa.verPaises);
+
     }
 
 }

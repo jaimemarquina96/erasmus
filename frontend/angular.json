@@ -31,7 +31,9 @@
               "src/assets/jquery/jquery-3.4.1.min.js",
               "src/assets/jquery/jquery-ui.js",
               "src/assets/jquery/jquery.autocomplete.js",
-              "../node_modules/jquery/dist/jquery.min.js"
+
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery-ui-dist/jquery-ui.js"
             ]
           },
           "configurations": {

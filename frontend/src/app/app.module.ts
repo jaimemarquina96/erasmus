@@ -12,6 +12,9 @@ import { SesionComponent } from './components/sesion/sesion.component';
 import { LoginComponent } from './components/sesion/login/login.component';
 import { RegisterComponent } from './components/sesion/register/register.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,9 @@ import { RegisterComponent } from './components/sesion/register/register.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

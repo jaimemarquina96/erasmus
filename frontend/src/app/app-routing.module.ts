@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SesionComponent } from './components/sesion/sesion.component';
 import { LoginComponent } from './components/sesion/login/login.component';
 import { RegisterComponent } from './components/sesion/register/register.component';
+import { MapComponent } from './components/map/map.component';
 
 
 const routes: Routes = [
@@ -43,7 +44,13 @@ const routes: Routes = [
         component: RegisterComponent
       }
     ]
+  },
+
+  {
+    path: 'map', component: MapComponent
   }
+
+
 ];
 
 @NgModule({
