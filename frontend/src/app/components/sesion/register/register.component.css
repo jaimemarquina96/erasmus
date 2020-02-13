@@ -1,0 +1,13 @@
+.entrada{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+.inputtext{
+    border: 2px solid black;
+    margin: 5px;
+}
