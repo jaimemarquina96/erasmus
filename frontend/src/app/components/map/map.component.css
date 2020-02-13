@@ -12,21 +12,9 @@
 }
 
 
-.ui-menu-item div{
-    background-color: red;
-}
-
-#ui-id-1 li{
+#mapamundi{
     height: 500px;
-    background-color: red;
+    border-radius: 15px;
+    z-index: 0;
 }
 
-.ui-menu-item-wrapper{
-    height: 300px;
-}
-
-.lista_autocomplete li{
-    list-style: none;
-    border: 10px solid black;
-    background-color: red;
-}

@@ -14,6 +14,9 @@ import { RegisterComponent } from './components/sesion/register/register.compone
 
 import { HttpClientModule } from '@angular/common/http';
 
+// MAPA LEAFLET
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent]
