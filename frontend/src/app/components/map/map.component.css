@@ -1,6 +1,16 @@
-.busqueda_mapa input{
-    width: 45%;
+
+.busqueda_mapa{
+    display: flex;
+    justify-content: space-around;
 }
+.busqueda_mapa p{
+    width: 50%;
+}
+.busqueda_mapa input{
+    width: 95%;
+    margin: auto;
+}
+
 
 .ui-menu-item div{
     background-color: red;
