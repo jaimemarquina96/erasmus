@@ -54,6 +54,7 @@ var UsuarioController = /** @class */ (function () {
                     case 0: return [4 /*yield*/, database_1.default.query('INSERT INTO usuarios SET ?', [req.body])];
                     case 1:
                         _a.sent();
+                        console.log(req.body);
                         res.json("Usuario creado");
                         return [2 /*return*/];
                 }

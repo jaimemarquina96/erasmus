@@ -8,7 +8,7 @@ var UsuarioRoutes = /** @class */ (function () {
         this.config();
     }
     UsuarioRoutes.prototype.config = function () {
-        this.router.post('/', usuarioController_1.controladorUsuario.create);
+        this.router.post('/crear', usuarioController_1.controladorUsuario.create);
         this.router.get('/', usuarioController_1.controladorUsuario.read);
         this.router.put('/:id', usuarioController_1.controladorUsuario.update);
         this.router.delete('/:id', usuarioController_1.controladorUsuario.delete);

@@ -1,4 +1,4 @@
-<form [formGroup]="formRegister" (submit)="submit()">
+<form method="POST" [formGroup]="formRegister" (submit)="submit()">
     <div class="entrada">
         <img src="../../../../assets/img/iconos/man-user.png">
         <input class="inputtext" type="text" formControlName="nombre" placeholder=" Nombre...">
@@ -9,12 +9,16 @@
         <input class="inputtext" type="text" formControlName="email" placeholder=" Email..."><br>
     </div>
     <div class="entrada">
+        <img src="../../../../assets/img/iconos/man-user.png">
+        <input class="inputtext" type="text" formControlName="username" placeholder=" Username..."><br>
+    </div>
+    <div class="entrada">
         <img src="../../../../assets/img/iconos/locked-padlock.png">
         <input class="inputtext" type="text" formControlName="password" placeholder=" Contraseña..."><br>
     </div>
     <div class="entrada">
         <img src="../../../../assets/img/iconos/earth.png">
-        <input class="inputtext" type="text" formControlName="paisorigen" placeholder=" País de Origen..."><br>
+        <input class="inputtext" type="text" formControlName="id_pais" placeholder=" País de Origen..."><br>
     </div>
     <div class="iniciosesion">
         <button type="submit">Continuar</button>

@@ -11,6 +11,7 @@ class UsuarioController{
 
     public async create(req:Request, res:Response){
         await pool.query('INSERT INTO usuarios SET ?', [req.body]);
+        console.log(req.body);
         res.json("Usuario creado");
     }
 

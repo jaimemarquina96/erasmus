@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Mimodelo } from 'src/app/modelos/mimodelo';
+import { MimodeloRegistro } from 'src/app/modelos/mimodeloRegistro';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
@@ -10,15 +10,17 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 })
 export class RegisterComponent implements OnInit {
 
-  public formuser: FormGroup;
-  public misusuarios: Mimodelo;
+  public formRegister: FormGroup;
+  public misusuarios: MimodeloRegistro;
 
   constructor(private formBuilder: FormBuilder, private mimodelo: UsuariosService) {
-    this.formuser = formBuilder.group({
+    this.formRegister = formBuilder.group({
       nombre: [''],
       apellidos: [''],
       email: [''],
-      password: ['']
+      username: [''],
+      password: [''],
+      id_pais: ['']
     });
   }
 
@@ -26,8 +28,9 @@ export class RegisterComponent implements OnInit {
   }
 
   submit() {
-    this.mimodelo.crearUsuario(this.formuser.value).subscribe(
+    this.mimodelo.crearUsuario(this.formRegister.value).subscribe(
       res => {
+        console.log("OK");
         console.log(res);
       },
       err => {
@@ -37,11 +40,27 @@ export class RegisterComponent implements OnInit {
   }
 
   get nombre() {
-    return this.formuser.get('nombre');
+    return this.formRegister.get('nombre');
   }
 
   get apellidos() {
-    return this.formuser.get('apellidos');
+    return this.formRegister.get('apellidos');
+  }
+
+  get email() {
+    return this.formRegister.get('email');
+  }
+
+  get username() {
+    return this.formRegister.get('username');
+  }
+
+  get password() {
+    return this.formRegister.get('password');
+  }
+
+  get id_pais() {
+    return this.formRegister.get('id_pais');
   }
 
 
