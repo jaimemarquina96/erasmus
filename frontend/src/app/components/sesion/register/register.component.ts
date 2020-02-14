@@ -30,7 +30,6 @@ export class RegisterComponent implements OnInit {
   submit() {
     this.mimodelo.crearUsuario(this.formRegister.value).subscribe(
       res => {
-        console.log("OK");
         console.log(res);
       },
       err => {
